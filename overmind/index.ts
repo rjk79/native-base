@@ -1,15 +1,15 @@
 import {
-    createStateHook,
-    createActionsHook,
-    createEffectsHook,
-    createReactionHook
+  createStateHook,
+  createActionsHook,
+  createEffectsHook,
+  createReactionHook,
 } from 'overmind-react';
-import { state } from './state.ts';
+import {state} from './state';
 import * as actions from './actions';
 
 export const config = {
-    state,
-    actions
+  state,
+  actions,
 };
 
 export const useAppState = createStateHook();

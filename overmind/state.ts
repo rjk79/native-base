@@ -1,8 +1,7 @@
 type State = {
-    text: string;
+  text: string;
 };
 
 export const state: State = {
-    text: 'hey',
+  text: 'hey',
 };
-

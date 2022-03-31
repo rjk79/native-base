@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {Text, View, TouchableOpacity, ActivityIndicator} from 'react-native';
-import tw from 'twrnc';
+import tw from './lib/tailwind';
 
 const Details = ({navigation}: {navigation: any}) => {
   const [loading, setLoading] = useState<boolean>(true);

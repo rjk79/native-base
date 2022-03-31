@@ -13,7 +13,7 @@ import {
   Switch,
   FlatList,
 } from 'react-native';
-import tw from 'twrnc';
+import tw from './lib/tailwind';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import {useAppState, useActions} from './overmind';
 
@@ -79,7 +79,7 @@ const Login = ({navigation}: {navigation: any}) => {
         <Button onPress={() => setModalVisible(true)} title="Show Modal" />
         <TouchableOpacity onPress={() => navigation.navigate('Details')}>
           <View style={tw`my-6 p-2.5 rounded-lg text-center flex-row justify-center`}>
-            <Text style={tw`mr-2 text-purple-500 text-center`}>Navigate to Details</Text>
+            <Text style={tw`mr-2 text-superhero-100 text-center`}>Navigate to Details</Text>
           </View>
         </TouchableOpacity>
         <Modal

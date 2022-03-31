@@ -14,11 +14,12 @@ import {
   FlatList,
 } from 'react-native';
 import tw from 'twrnc';
+import Ionicons from '@expo/vector-icons/Ionicons';
 import {useAppState, useActions} from './overmind';
 
 const staticImage = require('./logo.png');
 
-const Login = () => {
+const Login = ({navigation}: {navigation: any}) => {
   const {text} = useAppState() as any;
   const {saveText} = useActions() as any;
 
@@ -70,11 +71,17 @@ const Login = () => {
           style={tw`p-2.5 mt-6 text-purple-500 border border-gray-400`}
         />
         <TouchableOpacity onPress={() => saveText(newText)}>
-          <Text style={tw`p-2.5 my-6 text-white bg-purple-500 rounded-lg text-center`}>
-            Save Text
-          </Text>
+          <View style={tw`bg-purple-500 my-6 p-2.5 rounded-lg text-center flex-row justify-center`}>
+            <Text style={tw`mr-2 text-white text-center`}>Save Text</Text>
+            <Ionicons name="md-checkmark-outline" size={16} color="white" />
+          </View>
         </TouchableOpacity>
         <Button onPress={() => setModalVisible(true)} title="Show Modal" />
+        <TouchableOpacity onPress={() => navigation.navigate('Details')}>
+          <View style={tw`my-6 p-2.5 rounded-lg text-center flex-row justify-center`}>
+            <Text style={tw`mr-2 text-purple-500 text-center`}>Navigate to Details</Text>
+          </View>
+        </TouchableOpacity>
         <Modal
           animationType="slide"
           transparent={true}

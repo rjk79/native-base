@@ -23,3 +23,15 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+
+// Cypress.Commands.add('getBySel', (selector, ...args) => {
+//   return cy.get(`[data-cy=${selector}]`, ...args);
+// });
+
+// // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// // @ts-ignore
+// Cypress.Commands.add('getBySelLike', (selector, ...args) => {
+//   return cy.get(`[data-cy*=${selector}]`, ...args);
+// });

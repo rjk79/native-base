@@ -47,6 +47,10 @@ const Login = ({navigation}: {navigation: any}) => {
     return fetch(request);
   }
 
+  const navToDash = () => {
+    navigation.navigate('Dashboard');
+  };
+
   return (
     <View style={tw`flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8`}>
       <View style={tw`max-w-md w-full`}>
@@ -76,6 +80,14 @@ const Login = ({navigation}: {navigation: any}) => {
             <Ionicons name="md-checkmark-outline" size={16} color="white" />
           </View>
         </TouchableOpacity>
+
+        {/* ROUTES TO NEW COMPONENT  */}
+        <TouchableOpacity onPress={navToDash}>
+          <Text style={tw`p-2.5 my-6 text-white bg-purple-500 rounded-lg text-center`}>
+            TO NEW ROUTE
+          </Text>
+        </TouchableOpacity>
+
         <Button onPress={() => setModalVisible(true)} title="Show Modal" />
         <TouchableOpacity onPress={() => navigation.navigate('Details')}>
           <View style={tw`my-6 p-2.5 rounded-lg text-center flex-row justify-center`}>
